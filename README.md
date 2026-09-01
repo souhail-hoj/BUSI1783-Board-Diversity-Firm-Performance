@@ -53,9 +53,9 @@ The project uses secondary company and financial data collected during the avail
 
 LSEG Workspace was used for relevant board, diversity and company information before access expired. ORBIS was used for available firm-level financial and ownership information.
 
-Kaggle was not used as a data source.
+The cleaned dataset used for the analysis is included in the `data` folder of this repository.
 
-The original licensed source data are not redistributed through this public repository where their licensing conditions do not permit public redistribution.
+Kaggle was not used as a data source.
 
 ## Data cleaning
 
@@ -101,11 +101,11 @@ The analysis is conducted separately for the three performance measures: ROA, RO
 
 The repository documents the data preparation and statistical analysis procedures used for the BUSI1783 Business Analytics Project.
 
-The analysis code is provided in the `analysis` folder.
-
-The original licensed dataset is not included in the public repository. Researchers wishing to reproduce the analysis should obtain the relevant source data through the appropriate licensed data providers and prepare the dataset according to the procedures documented in this repository.
+The analysis code and compiled Python notebook are provided in the `analysis` folder, and the cleaned dataset used for the analysis is provided in the `data` folder.
 
 The results reported in the dissertation are based on the final cross-sectional dataset and the analysis procedures documented in this repository.
+
+The analysis requires Python and the packages listed in `requirements.txt`.
 
 ## Repository structure
 
