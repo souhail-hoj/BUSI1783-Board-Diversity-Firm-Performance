@@ -24,28 +24,34 @@ The results should therefore be interpreted as cross-sectional associations rath
 
 ### Board diversity variables
 
-- Board Gender Diversity – percentage of directors who are female.
-- Board Specific Skills – percentage of directors identified as having sector-specific skills.
-- Policy Board Experience – indicator for whether the board includes relevant policy or regulatory experience.
-- Board Size – total number of directors.
+- **Board Gender Diversity** – percentage of directors who are female.
+- **Board Specific Skills** – percentage of directors identified as having sector-specific skills.
+
+### Exploratory board variable
+
+- **Policy Board Experience** – indicator for whether the board includes relevant policy or regulatory experience. This variable is treated as an exploratory proxy rather than as a direct measure of professional or experience diversity.
+
+### Board characteristic
+
+- **Board Size** – total number of directors.
 
 ### Firm-level controls
 
-- Firm Size – log of total assets.
-- Leverage – total debt as a percentage of total equity.
-- GICS Sector – industry classification used to account for sector differences.
+- **Firm Size** – firm-size measure provided in the source dataset and used as a control variable.
+- **Leverage** – total debt as a percentage of total equity.
+- **GICS Sector** – industry classification used to account for differences between sectors.
 
 ### Performance measures
 
-- ROA – Return on Assets.
-- ROE – Return on Equity.
-- Tobin's Q – market-based measure of firm valuation.
+- **ROA** – Return on Assets.
+- **ROE** – Return on Equity.
+- **Tobin's Q** – a market-based proxy for firm valuation, calculated from market capitalisation relative to total assets.
 
 ## Data sources
 
 The project uses secondary company and financial data collected during the available extraction period.
 
-LSEG Workspace was used for relevant board and diversity information before access expired. ORBIS was used for available firm financial and ownership information, and company annual reports were consulted where individual disclosures required clarification.
+LSEG Workspace was used for relevant board, diversity and company information before access expired. ORBIS was used for available firm-level financial and ownership information.
 
 Kaggle was not used as a data source.
 
@@ -69,7 +75,7 @@ Ethnicity was considered as a possible diversity dimension, but sufficiently com
 
 The analysis uses ordinary least squares (OLS) regression models to examine the association between board diversity and firm performance.
 
-The models include:
+The models consider:
 
 - board diversity variables;
 - board size;
@@ -79,34 +85,36 @@ The models include:
 
 Heteroskedasticity-robust HC3 standard errors are used.
 
-Additional diagnostic checks include:
+Additional statistical checks include:
 
+- descriptive statistics;
 - correlation analysis;
 - variance inflation factor (VIF);
 - Breusch–Pagan test;
-- Cook's distance; and
-- sensitivity analysis using trimmed dependent-variable samples.
+- Cook's distance;
+- outlier and influence checks; and
+- sensitivity analysis.
+
+The analysis is conducted separately for the three performance measures: ROA, ROE and Tobin's Q.
 
 ## Reproducibility
 
-The repository is intended to document the data preparation and statistical analysis process used for the BUSI1783 Business Analytics Project.
+The repository documents the data preparation and statistical analysis procedures used for the BUSI1783 Business Analytics Project.
 
-The analysis results reported in the dissertation are based on the final cross-sectional dataset and the analysis procedures documented in this repository.
+The analysis code is provided in the `analysis` folder.
 
-## Limitations
+The original licensed dataset is not included in the public repository. Researchers wishing to reproduce the analysis should obtain the relevant source data through the appropriate licensed data providers and prepare the dataset according to the procedures documented in this repository.
 
-The main methodological limitations are:
+The results reported in the dissertation are based on the final cross-sectional dataset and the analysis procedures documented in this repository.
 
-1. The cross-sectional design does not allow within-firm changes to be analysed.
-2. The results should not be interpreted as evidence of causality.
-3. Board-composition variables contain substantial missingness for some measures.
-4. Ethnicity could not be incorporated because sufficiently complete data were unavailable.
-5. The original planned panel design could not be completed because access to LSEG Workspace expired during data extraction.
+## Repository structure
 
-## Academic project
-
-Module: BUSI1783 – Business Analytics Project
-
-Research topic: Board Diversity and Firm Performance
-
-Study design: Cross-sectional statistical analysis of UK non-financial listed firms.
+```text
+BUSI1783-Board-Diversity-Firm-Performance/
+│
+├── analysis/
+│   └── board_diversity_regression_analysis.py
+│
+├── README.md
+│
+└── requirements.txt
