@@ -113,7 +113,12 @@ The results reported in the dissertation are based on the final cross-sectional 
 BUSI1783-Board-Diversity-Firm-Performance/
 │
 ├── analysis/
-│   └── board_diversity_regression_analysis.py
+│   ├── board_diversity_regression_analysis.py
+│   └── board_diversity_regression_analysis.ipynb
+│
+├── data/
+│   ├── BUSI1783_Cross_Sectional_Dataset.xlsx
+│   └── README.md
 │
 ├── README.md
 │
