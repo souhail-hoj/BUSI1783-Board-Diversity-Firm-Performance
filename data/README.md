@@ -4,15 +4,11 @@ The project dataset contains 872 UK non-financial listed firms observed cross-se
 
 The data were collected from licensed secondary sources available during the project data-extraction period, including LSEG Workspace and ORBIS.
 
-The original source data are not included in this public repository because they are subject to licensing and access restrictions.
+The cleaned dataset used for the analysis is included in this repository as BUSI1783_Cross_Sectional_Dataset.xlsx.
 
 The dataset used for the analysis was cleaned before the statistical analysis. The cleaning process included checking firm identifiers and duplicate observations, confirming the cross-sectional structure, checking missing values, and retaining missing observations as missing rather than replacing them with unsupported values.
 
 The final analysis uses complete cases separately for each regression model because the availability of variables differs across observations.
-
-To reproduce the analysis, the licensed project dataset should be placed in the project folder using the filename:
-
-`BUSI1783_Cross_Sectional_Dataset.xlsx`
 
 The analysis script is located in:
 
